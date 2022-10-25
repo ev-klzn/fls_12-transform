@@ -1,0 +1,165 @@
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* по умолчанию */
+}
+body {
+	line-height: 1;
+	/* color: #000; */
+	/* font-family:""; */
+	overflow-x: hidden;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #333;
+}
+.wrapper {
+	min-height: 100%;
+	padding: 30px;
+}
+/* ------------------------------ */
+
+/* Селекторы атрибутов */
+
+/* Конкретый поиск */
+[href="https://google.com"]
+{
+	/* color: red; */
+}
+/* Поиск окончания */
+[href$=".com"] {
+	/* color: red; */
+}
+/* Поиск начала */
+[href^="http"] {
+	/* color: red; */
+}
+/* Поиск слова из указанных через пробелы */
+[class~="body-about"] {
+	/* color: red; */
+}
+/* Поиск слова из указанных через дефис */
+[class|="body-about"] {
+	/* color: red; */
+}
+/* Поиск по любому вхождению */
+[href*=":"] {
+	/* color: red; */
+}
+/* Ограничивающий контейнер */
+[class*="__container"] {
+	max-width: 800px;
+	margin: 0px auto;
+}
+
+/* ------------------------------ */
+
+.block {
+	/* width: 100%; */
+	width: 200px;
+	height: 200px;
+	background-color: rgba(255, 255, 255, 0.1);
+	position: relative;
+
+	/* Установка глубины и смена точки начала координат. */
+	/* 
+	perspective: 400px;
+	perspective-origin: 0 0;
+	 */
+
+	/* Определяет, как дочерние элементы должны 
+	 отображаться в 3D-пространстве. */
+	/* transform-style: flat;
+		transform-style: preserve-3d;
+	*/
+}
+
+/* 
+С помощью 2D и 3D трансформации мы сможем сдвигать, 
+поворачивать, масштабировать элементы и делать многое другое!
+*/
+
+.block__item {
+	background-color: #7a956b;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+
+	/* 
+	Сдвигает элемент на новое место, перемещая относительно 
+	изначального положения объекта вправо и вниз, 
+	используя координаты X и Y. 
+	Записывается следующим образом translate (x,y).
+	*/
+	/* transform: translate(0%, 0%); */
+
+	/*
+	Масштабирует элементы, делая их больше или меньше.
+	*/
+	/* transform: scale(1, 0.5); */
+
+	/* Поворачивает элементы. */
+	/* transform: rotate(45deg); */
+
+	/* Деформирует (наклоняет) элементы. */
+	/* transform: skew(-5deg, 60deg); */
+
+	/* Позволяет объединить несколько функций 2D-трансформаций в одной. */
+	/* transform: translate(10%, 10%) scale(0.5) rotate(45deg); */
+
+	/* 
+	Позволяет сместить центр трансформации, относительно которого 
+	происходит изменение положения/размера/формы элемента.
+	*/
+	/* transform-origin: 0px 0px; */
+
+	/* Отображение обратной стороны объекта. */
+	/* backface-visibility: hidden; */
+}
+
+.block:hover .block__item {
+}
+
+[data-container] {
+	margin: 0px auto;
+	max-width: 300px;
+}
