@@ -58,11 +58,31 @@ body {
 
 /* --------------------------- */
 
-.wrapper {}
+.wrapper {
+    padding: 100px 20px 20px 20px;
+    margin: 0 auto;
+    width: 500px;
+    height: 200px;
+    background-color: rgba(62, 62, 61, 0.028);
+    position: relative;
+}
 
-.__1 {}
+.__1 {
+    width: 450px;
+    height: 100px;
+    background-color: rgb(15, 225, 214);
+    border-radius: 20px;
+}
 
-.__2 {}
+.__2 {
+    position: absolute;
+    top: 25px;
+    left: 120px;
+    width: 250px;
+    height: 75px;
+    background-color: rgba(3, 157, 223, 0.22);
+    border-radius: 25px 25px 0 0;
+}
 
 .__3 {}
 
